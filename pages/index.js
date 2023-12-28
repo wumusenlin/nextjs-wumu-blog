@@ -1,18 +1,25 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>wumu-BLOG</title>
+        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/wumu-ico.ico" />
       </Head>
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Learn <Link href="/test"><a>this page!</a></Link>
         </h1>
-
+        <h1 className="title">
+          first-post.js <Link href="/posts/first-post"><a>first-post.js</a></Link>
+        </h1>
+        <h1>Read <Link href="/posts/first-post"><a>this page!</a></Link></h1>
+        <h1>Read <Link href="/dailySentence"><a>daily sentence!</a></Link></h1>
+        
         <p className="description">
           Get started by editing <code>pages/index.js</code>
         </p>
