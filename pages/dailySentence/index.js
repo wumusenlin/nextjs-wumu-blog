@@ -14,22 +14,29 @@ export default function FirstPost() {
 
 
   return (
-    <>
+    <div style={{ height: '100vh', width: '100vw', background: '#000', color: 'white' }}>
       <Head>
         <title>每日一句</title>
       </Head>
 
-      <main style={{ textAlign: 'center', paddingTop: '20vh' }}>
+      <main style={{ textAlign: 'center', width: '50%', margin: '0 auto', paddingTop: '30vh' }}>
         {
           isLoading ?
             <p>获取数据中...</p> :
             <Fragment>
-              <h1 style={{ width: '50%', margin: '0 auto',  }}>{hitokoto}</h1>
-              <p>{from}</p>
-              <p>{from_who}</p>
+              <h1 >{hitokoto}</h1>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'flex-end', float: 'right' }}>
+                  <div style={{ paddingRight: 12 }}>——</div>
+                  <div>
+                    <span style={{ paddingRight: 12 }}>{from}</span>
+                    <span>{from_who}</span>
+                  </div>
+                </div>
+              </div>
             </Fragment>
         }
       </main>
-    </>
+    </div>
   )
 }
