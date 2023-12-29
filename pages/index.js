@@ -3,26 +3,19 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="container">
+    <div >
       <Head>
-        <title>wumu-BLOG</title>
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <title>wumu</title>
         <link rel="icon" href="/wumu-ico.ico" />
       </Head>
 
       <main>
-        <h1 className="title">
-          Learn <Link href="/test"><a>this page!</a></Link>
+        <h1 >
+          Let Us <Link href={{ pathname: '/dailySentence', query: { senlin: '我是' } }}>
+            <a>to daily sentence💫</a>
+          </Link>
         </h1>
-        <h1 className="title">
-          first-post.js <Link href="/posts/first-post"><a>first-post.js</a></Link>
-        </h1>
-        <h1>Read <Link href="/posts/first-post"><a>this page!</a></Link></h1>
-        <h1>Read <Link href="/dailySentence"><a>daily sentence!</a></Link></h1>
-        
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <h1>Read <Link href="/posts/first-post"><a>first page!</a></Link></h1>
 
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
@@ -55,7 +48,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer>
+      {/* <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
@@ -64,18 +57,9 @@ export default function Home() {
           Powered by{' '}
           <img src="/vercel.svg" alt="Vercel" className="logo" />
         </a>
-      </footer>
+      </footer> */}
 
       <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
         main {
           padding: 5rem 0;
           flex: 1;
@@ -84,7 +68,9 @@ export default function Home() {
           justify-content: center;
           align-items: center;
         }
-
+        h1{
+          font-size: 48px;
+        }
         footer {
           width: 100%;
           height: 100px;
@@ -105,7 +91,7 @@ export default function Home() {
         }
 
         a {
-          color: inherit;
+          // color: inherit;
           text-decoration: none;
         }
 
